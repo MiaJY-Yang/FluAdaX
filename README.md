@@ -1,1 +1,3 @@
 # FluAdaX
+## Overview
+FluAdaX is a deep learning framework integrating moving average equipped gated attention (MEGA) to quantify host adaptation of influenza A virus (IAV) using IAV nucleotide sequences. Full-genome endemic IAV strains curated from EpiFlu Database on Global Initiative on Sharing All Influenza Data (GISAID) were utilized for training, validating, and testing FluAdaX model. The base module of FluAdaX is a transformer-style model with four attention layers. The architecture of MEGA was employed as the backbone of FluAdaX. This design enabled FluAdaX to effectively process IAV full-genome sequences, capturing complex patterns of viral adaptation across various hosts.
