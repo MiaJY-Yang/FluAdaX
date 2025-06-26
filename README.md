@@ -3,12 +3,12 @@
 FluAdaX is a deep learning framework designed to quantify host adaptation patterns in Influenza A Virus (IAV) using nucleotide sequences. The base module of FluAdaX is a transformer-style model with multiple attention layers. Moving average equipped gated attention (MEGA) is employed as the backbone of FluAdaX to efficiently process extremely long sequences, in terms of computational and information extraction performance. The whole dataset of nucleotide sequences of the IAV was partitioned into training, validation, and test sets at an 8:1:1 ratio according to the collection timeline within each host category. The outputs of FluAdaX are processed with a softmax function to generate a set of probability values (confidence level β) corresponding to the host species. 
 ## Overview
 Three types of models are developed using the FluAdaX framework:
-1. FluAdaX-Genome (FluAdaX-G)
-Input: Concatenated alignment-free nucleotide sequences of all 8 IAV segments (~13kb per strain)
-2. FluAdaX-Segment (FluAdaX-S)
-Input: Alignment-free nucleotide sequences of individual IAV gene segments
-3.FluAdaX-AIV
-Inputs: Alignment of nucleotide sequences of individual IAV gene segments
+1. **FluAdaX-Genome (FluAdaX-G)**
+  -- Input: Concatenated alignment-free nucleotide sequences of all 8 IAV segments (~13kb per strain)
+2. **FluAdaX-Segment (FluAdaX-S)**
+  --Input: Alignment-free nucleotide sequences of individual IAV gene segments
+3. **FluAdaX-AIV**
+  --Inputs: Alignment of nucleotide sequences of individual IAV gene segments
 ## Environment Installation
 We recommend to use linux and conda for the environment management.
 
