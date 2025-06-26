@@ -37,6 +37,7 @@ Download required model files and tokenizer:
 Run host origin prediction:
 ```bash
 python FluAdaX_G_infer.py
+```bash
 #### Input
 Create test.csv file with alignment-free nucleotide sequences of whole genome. For format reference, see: inference/FluAdaX_G/test_example.csv
 #### Output
@@ -48,6 +49,7 @@ Predicted host typeConsistency accuracy between prediction and input label
 Run segment-level prediction:
 ```bash
 python FluAdaX_S_infer.py
+```bash
 #### Input
 Create test.csv file with alignment-free nucleotide segment sequences. For format reference, see: inference/FluAdaX_S/test_example.csv
 #### Output
