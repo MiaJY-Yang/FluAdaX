@@ -22,16 +22,36 @@ conda create -n FluAdaX python=3.8
 conda activate FluAdaX
 Step2: install other requirements
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+## Models and Tokenizer Files
+Download required model files and tokenizer:
+1. **Models**:
+   - FluAdaX-G: [`model/trained_FluAdaX_G/`]
+   - FluAdaX-S: [`model/trained_FluAdaX_S/`]
+2. **Tokenizer Files** (place in inference directory):
+   - [`inference/bio_tokenizer.py`](path/to/inference/bio_tokenizer.py)
+   - [`inference/vocab.txt`](path/to/inference/vocab.txt)
+
 ## Inference
 ### 1. FluAdaX-G (Whole Genome Model)
-Run host origin prediction using FluAdaX-G:
+Run host origin prediction:
 ```bash
 python FluAdaX_G_infer.py
-Prepare test.csv file as input. For format reference, see: inference/FluAdaX_G/test_example.csv
-Output file contains is in .xlsx format containing probability distribution over 5 hosts: human, swine, avian, canine, equine; and predicted host type. Consistency accuracy between prediction and input host label is also provided.
-3. FluAdaX-S
-Run host origin prediction using FluAdaX-S:
+#### Input
+Create test.csv file with alignment-free nucleotide sequences of whole genome. For format reference, see: inference/FluAdaX_G/test_example.csv
+#### Output
+1..xlsx file containing:
+Probability distribution over 5 hosts: human, swine, avian, canine, equine
+Predicted host typeConsistency accuracy between prediction and input label
+2.Consistency accuracy between prediction and input host label
+### 2. FluAdaX-S (Segment-Specific Model)
+Run segment-level prediction:
 ```bash
 python FluAdaX_S_infer.py
-Prepare test.csv file as input. For format reference, see: inference/FluAdaX_S/test_example.csv
-Output file contains is in .xlsx format containing probability distribution over 5 hosts: human, swine, avian, canine, equine; and predicted host type. Consistency accuracy between prediction and input host label is also provided.
+#### Input
+Create test.csv file with alignment-free nucleotide segment sequences. For format reference, see: inference/FluAdaX_S/test_example.csv
+#### Output
+1..xlsx file containing:
+Probability distribution over 5 hosts: human, swine, avian, canine, equine
+Predicted host typeConsistency accuracy between prediction and input label
+2.Consistency accuracy between prediction and input host label
