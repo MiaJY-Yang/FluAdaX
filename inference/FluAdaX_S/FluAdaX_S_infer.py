@@ -158,3 +158,18 @@ data_test["prediction_host"] = prediction_res_host
 output_file_path = "./test_result.xlsx"
 data_test.to_excel(output_file_path, index=False, sheet_name='test预测结果')
 
+
+file_path =  './test_result.xlsx'
+df = pd.read_excel(file_path)
+
+df['logits_ls_norm'] = df['logits_ls_norm'].str.strip('[]')  # 去掉方括号
+df[['Human_prob', 'Avian_prob', 'Swine_prob', 'Canine_prob', 'Equine_prob']] = df['logits_ls_norm'].str.split(',', expand=True).astype(float)
+
+# predicted_host
+df['predict_host'] = df[['Human_prob', 'Avian_prob', 'Swine_prob', 'Canine_prob', 'Equine_prob']].idxmax(axis=1).str.replace('_prob', '')
+
+output_file = './test_result.xlsx'
+df.to_excel(output_file, index=False)
+
+print(f"Well done, output to {output_file}")
+
