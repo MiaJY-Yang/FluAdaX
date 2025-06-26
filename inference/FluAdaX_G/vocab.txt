@@ -1,0 +1,11 @@
+<s>
+<pad>
+<unk>
+<mask>
+<sep>
+</s>
+C
+G
+T
+A
+N

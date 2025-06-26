@@ -1,0 +1,11 @@
+<cls>
+<pad>
+<eos>
+<unk>
+C
+G
+T
+A
+N
+R
+-
