@@ -11,17 +11,28 @@ Input: Alignment-free nucleotide sequences of individual IAV gene segments
 Inputs: Alignment of nucleotide sequences of individual IAV gene segments
 ## Environment Installation
 We recommend to use linux and conda for the environment management.
-###Step1: install python 3.8
+
+### Step1: install python 3.8
 1) download anaconda3
+```bash
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
+```
 2) install conda
+```bash
 sh Anaconda3-2022.05-Linux-x86_64.sh
+```
 3) create a virtual environment: python=3.8
+```bash
 conda create -n FluAdaX python=3.8
+```
 4) activate FluAdaX
+```bash
 conda activate FluAdaX
-###Step2: install other requirements
+```
+### Step2: install other requirements
+```bash
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 ## Models and Tokenizer Files
 Download required model files and tokenizer:
@@ -42,10 +53,11 @@ python FluAdaX_G_infer.py
 Create test.csv file with alignment-free nucleotide sequences of whole genome. 
 **Example**: inference/FluAdaX_G/test_example.csv
 #### Output
-1..xlsx file containing:
-Probability distribution over 5 hosts: human, swine, avian, canine, equine;
-Predicted host typeConsistency accuracy between prediction and input label;
-2.Consistency accuracy between prediction and input host label
+##### 1.**.xlsx file** containing:
+   - Probability distribution over 5 hosts: human, swine, avian, canine, equine.
+   - Predicted host type.
+##### 2. **Acc**: 
+   - Consistency accuracy between prediction and input host label (if input host is provided)
 
 ### 2. FluAdaX-S (Segment-Specific Model)
 Run segment-level prediction:
@@ -56,7 +68,8 @@ python FluAdaX_S_infer.py
 Create test.csv file with alignment-free nucleotide segment sequences. 
 **Example**: inference/FluAdaX_S/test_example.csv
 #### Output
-1..xlsx file containing:
-Probability distribution over 5 hosts: human, swine, avian, canine, equine;
-Predicted host typeConsistency accuracy between prediction and input label;
-2.Consistency accuracy between prediction and input host label
+##### 1.**.xlsx file** containing:
+   - Probability distribution over 5 hosts: human, swine, avian, canine, equine.
+   - Predicted host type.
+##### 2. **Acc**: 
+   - Consistency accuracy between prediction and input host label (if input host is provided)
