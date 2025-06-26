@@ -11,7 +11,7 @@ Input: Alignment-free nucleotide sequences of individual IAV gene segments
 Inputs: Alignment of nucleotide sequences of individual IAV gene segments
 ## Environment Installation
 We recommend to use linux and conda for the environment management.
-Step1: install python 3.8
+###Step1: install python 3.8
 1) download anaconda3
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-Linux-x86_64.sh
 2) install conda
@@ -20,7 +20,7 @@ sh Anaconda3-2022.05-Linux-x86_64.sh
 conda create -n FluAdaX python=3.8
 4) activate FluAdaX
 conda activate FluAdaX
-Step2: install other requirements
+###Step2: install other requirements
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ## Models and Tokenizer Files
@@ -36,8 +36,8 @@ Download required model files and tokenizer:
 ### 1. FluAdaX-G (Whole Genome Model)
 Run host origin prediction:
 ```bash
-python FluAdaX_G_infer.py
-```bash
+python FluAdaX_G_infer.py;
+
 #### Input
 Create test.csv file with alignment-free nucleotide sequences of whole genome. For format reference, see: inference/FluAdaX_G/test_example.csv
 #### Output
@@ -45,11 +45,12 @@ Create test.csv file with alignment-free nucleotide sequences of whole genome. F
 Probability distribution over 5 hosts: human, swine, avian, canine, equine
 Predicted host typeConsistency accuracy between prediction and input label
 2.Consistency accuracy between prediction and input host label
+
 ### 2. FluAdaX-S (Segment-Specific Model)
 Run segment-level prediction:
 ```bash
-python FluAdaX_S_infer.py
-```bash
+python FluAdaX_S_infer.py;
+
 #### Input
 Create test.csv file with alignment-free nucleotide segment sequences. For format reference, see: inference/FluAdaX_S/test_example.csv
 #### Output
