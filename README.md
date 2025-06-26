@@ -4,11 +4,15 @@ FluAdaX is a deep learning framework designed to quantify host adaptation patter
 ## Overview
 Three types of models are developed using the FluAdaX framework:
 1. **FluAdaX-Genome (FluAdaX-G)**
-  -- Input: Concatenated alignment-free nucleotide sequences of all 8 IAV segments (~13kb per strain)
+   - Aim: Predict host adaptation of IAV strains across human, swine, avian, canine, and equine 
+   - Input: Concatenated alignment-free nucleotide sequences of all 8 IAV segments (~13kb per strain)
 2. **FluAdaX-Segment (FluAdaX-S)**
-  --Input: Alignment-free nucleotide sequences of individual IAV gene segments
+   - Aim: Predict host adaptation of IAV segments across human, swine, avian, canine, and equine
+   - Input: Alignment-free nucleotide sequences of individual IAV gene segments
 3. **FluAdaX-AIV**
-  --Inputs: Alignment of nucleotide sequences of individual IAV gene segments
+   - Aim: Host discrimination in avian-to-human transmission for each segment.
+   - Inputs: Alignment of nucleotide sequences of individual IAV gene segments
+   - Note: FluAdaX-AIV models were developed for each gene segments
 ## Environment Installation
 We recommend to use linux and conda for the environment management.
 
