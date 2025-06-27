@@ -77,3 +77,35 @@ Create test.csv file with alignment-free nucleotide segment sequences.
    - Predicted host type.
 ##### 2. **Acc**: 
    - Consistency accuracy between prediction and input host label (if input host is provided)
+
+## Risk Assessment
+
+Run risk assessment:
+
+**⚠️Code is coming soon!!!**
+
+### Assessment details
+#### 1.Host origin prediction:
+We examine the top 2 predicted host probabilities.
+- Single dominant probability (>0.8) → prefers host with highest probability 
+- Two significant probabilities (both ≥0.2) → prefers non-human host with highest probability
+
+#### 2. Spillover score calculation:
+>Note: The spillover score should only be used for evaluation when the collection host is  explicitly known to be one of these five host types: Human, Swine, Avian, Canine, or Equine.
+- The spillover score is calculated from the predicted host origin
+- The score range of each host origin is provided in λsp_range.txt
+- A higher value indicating a greater risk of spillover from the original host
+
+#### 3. Adaptability score calculation:
+- The adaptability score is calculated from the predicted host origin to target host X
+- The score range of each host origin is provided in λad(X)_range.txt
+- A higher value indicating a greater risk of adaptation to the target host X
+
+####  Input
+Case_result.xlsx file generated using FluAdaX-G
+
+####  Output
+**Case_prediction.xlsx file** containing:
+- Host_origin
+- Spillover score λsp.
+- Adaptability score targeting five hosts: λad(human), λad(swine), λad(avian), λad(canine), λad(equine).
