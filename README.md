@@ -1,7 +1,7 @@
 # FluAdaX
 ## Introduction
 FluAdaX is a deep learning framework designed to quantify host adaptation patterns in Influenza A Virus (IAV) using nucleotide sequences. The base module of FluAdaX is a transformer-style model with multiple attention layers. Moving average equipped gated attention (MEGA) is employed as the backbone of FluAdaX to efficiently process extremely long sequences, in terms of computational and information extraction performance. The whole dataset of nucleotide sequences of the IAV was partitioned into training, validation, and test sets at an 8:1:1 ratio according to the collection timeline within each host category. The outputs of FluAdaX are processed with a softmax function to generate a set of probability values (confidence level β) corresponding to the host species. 
-## Overview
+## 1. Overview
 Three types of models are developed using the FluAdaX framework:
 1. **FluAdaX-Genome (FluAdaX-G)**
    - Aim: Predict host adaptation of IAV strains across human, swine, avian, canine, and equine 
@@ -13,7 +13,7 @@ Three types of models are developed using the FluAdaX framework:
    - Aim: Host discrimination in avian-to-human transmission for each segment.
    - Inputs: Alignment of nucleotide sequences of individual IAV gene segments
    - Note: FluAdaX-AIV models were developed for each gene segments
-## Environment Installation
+## 2. Environment Installation
 We recommend to use linux and conda for the environment management.
 
 ### Step1: install python 3.8
@@ -38,7 +38,7 @@ conda activate FluAdaX
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-## Models and Tokenizer Files
+## 3. Models and Tokenizer Files
 Download required model files and tokenizer:
 1. **Models**:
    - FluAdaX-G: `model/trained_FluAdaX_G/`
@@ -47,7 +47,7 @@ Download required model files and tokenizer:
    - [`inference/bio_tokenizer.py`](path/to/inference/bio_tokenizer.py)
    - [`inference/vocab.txt`](path/to/inference/vocab.txt)
 
-## Inference
+## 4. Inference
 ### 1. FluAdaX-G (Whole Genome Model)
 Run host origin prediction:
 ```bash
@@ -78,7 +78,7 @@ Create test.csv file with alignment-free nucleotide segment sequences.
 ##### 2. **Acc**: 
    - Consistency accuracy between prediction and input host label (if input host is provided)
 
-## Risk Assessment
+## 5. Risk Assessment
 
 Run risk assessment:
 
@@ -109,6 +109,9 @@ Case_result.xlsx file generated using FluAdaX-G
 - Host_origin
 - Spillover score λsp.
 - Adaptability score targeting five hosts: λad(human), λad(swine), λad(avian), λad(canine), λad(equine).
+
+## Data availability
+The datasets can be access at Zenodo (https://doi.org/10.5281/zenodo.15803258)
 
 ##  Citation
 If you use FluAdaX in your research, please cite the following:
