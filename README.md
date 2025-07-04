@@ -110,10 +110,10 @@ Case_result.xlsx file generated using FluAdaX-G
 - Spillover score λsp.
 - Adaptability score targeting five hosts: λad(human), λad(swine), λad(avian), λad(canine), λad(equine).
 
-## Data availability
+## 6. Data availability
 The datasets can be access at Zenodo (https://doi.org/10.5281/zenodo.15803258)
 
-##  Citation
+##  7. Citation
 If you use FluAdaX in your research, please cite the following:
 ```bash
 @article {Yang2025.06.17.660059,
