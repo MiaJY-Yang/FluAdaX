@@ -116,14 +116,13 @@ The datasets can be access at Zenodo (https://doi.org/10.5281/zenodo.15803258)
 ##  7. Citation
 If you use FluAdaX in your research, please cite the following:
 ```bash
-@article {Yang2025.06.17.660059,
+@article {Yang2025.06.17.660059,  
 	author = {Yang, Jiaying and Fang, Pan and Liang, Jianqiang and Chen, Yihao and Yang, Lei and Zhu, Wenfei and Shi, Mang and Du, Xiangjun and Pu, Juan and Wang, Dayan and Xue, Guirong and Li, Zhaorong and Shu, Yuelong},
 	title = {Using Artificial Intelligence to Assess Cross-Species Transmission Potential of Influenza A Virus},
 	elocation-id = {2025.06.17.660059},
 	year = {2025},
 	doi = {10.1101/2025.06.17.660059},
 	publisher = {Cold Spring Harbor Laboratory},
-	abstract = {Influenza A viruses (IAVs) pose pandemic threats through cross-species transmission, yet predicting their adaptive evolution remains challenging. We introduced Influenza A virus Adaptability to host X (FluAdaX), a deep learning framework that integrates a moving average-equipped gated attention mechanism using full-genome sequences. FluAdaX demonstrated robust host classification performance across endemic IAV strains, and outperformed traditional models in detecting avian-to-human transmission. Spillover score and adaptability score were introduced to evaluate host shift risk, which prioritized variants with elevated human adaptation potential, such as H7N9, H9N2 avian IAVs, and H1N1 swine IAVs. Besides HA and NA genes, PB2 and NS genes were found critical for zoonosis. Potential molecular markers associated with avian/human tropism were identified across PB2 and NS genes using XGBoost. FluAdaX provided a dynamic framework to decode IAV host adaptation, enabling real-time risk assessment of cross-species transmission of emerging IAV variants.Competing Interest StatementThe authors have declared no competing interest.the National Key Research and Development Program of China, 2021YFC2300100Non-profit Central Research Institute Fund of Chinese Academy of Medical Sciences, 2022-RC310-02the National Nature Science Foundation of China, 81961128002, 82341118},
 	URL = {https://www.biorxiv.org/content/early/2025/06/27/2025.06.17.660059},
 	eprint = {https://www.biorxiv.org/content/early/2025/06/27/2025.06.17.660059.full.pdf},
 	journal = {bioRxiv}
